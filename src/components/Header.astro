@@ -1,0 +1,29 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<header>
+	<div class="grid-container">
+		<div class="row">
+			<div class="col-4">
+				<h1>{SITE_TITLE}</h1>
+			</div>
+			<div class="col-8">
+				<nav>
+					<HeaderLink href="/">Home</HeaderLink>
+					<HeaderLink href="/about">About</HeaderLink>
+					<HeaderLink href="/blog">Blog</HeaderLink>
+				</nav>
+		</div>
+		</div>
+	</div>
+</header>
+<style>
+	header {
+		margin: 0em 0 2em;
+	}
+	h2 {
+		margin: 0.5em 0;
+	}
+</style>

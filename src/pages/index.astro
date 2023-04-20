@@ -1,0 +1,78 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Carousel from '../components/Carousel.astro';
+import Calendar from '../components/Calendar';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<div class="container wrapperImage">
+			<div class="row">
+				<div class="col-lg">
+					<Carousel />
+				</div>
+			</div>
+			
+			<div class="row my-5">
+				<div class="col">
+					<h1>Medisafe – Innovative Medication Management Made Easy!</h1>
+					<p>Experience the convenience of managing your medications with Medisafe, the world's #1 medication reminder and organizer app. Stay on track with your medications, appointments, and measurements, all in one user-friendly app!
+					</p>
+				</div>
+			</div>
+			
+			<div class="row my-5">
+				<div class="col">
+					<h2>Key Features</h2>
+				<ul>
+					<li>
+						Innovative Calendar and Data Entry Form: Easily input your medications, dosages, and schedules using our intuitive data entry form. The built-in calendar keeps track of your daily regimen, appointments, and measurements.
+						Timely Notifications: Set up customizable alerts and notifications to ensure you never forget a dose, appointment, or measurement.
+					</li>
+					<li>Convenient Medication Organization: Sort your medications by name, dosage, frequency, or time of day for quick and easy access.</li>
+					<li>Healthcare Provider Integration: Connect with your healthcare providers for seamless prescription updates and improved communication.</li>
+					<li>Data-Driven Insights: Gain valuable insights into your medication adherence and make informed decisions about your health.</li>
+					<li>Caregiver Support: Add a Medfriend to receive discreet, free notifications if you miss a dose, keeping you and your loved ones connected.</li>
+				</ul>
+				</div>
+			</div>
+			<div class="row g-1">
+				<div class="col-lg-5 text-center">
+					<Calendar />
+				</div>
+
+				<div class="col-lg-7">
+					<h2>How It Works</h2>
+					<p>Medisafe is a simple, easy-to-use medication management app that helps you stay on track with your medications, appointments, and measurements. With Medisafe, you can:</p>
+					<ul>
+						<li>Input your medications, dosages, and schedules using our intuitive data entry form.</li>
+						<li>Set up customizable alerts and notifications to ensure you never forget a dose, appointment, or measurement.</li>
+						<li>Sort your medications by name, dosage, frequency, or time of day for quick and easy access.</li>
+						<li>Connect with your healthcare providers for seamless prescription updates and improved communication.</li>
+						<li>Gain valuable insights into your medication adherence and make informed decisions about your health.</li>
+						<li>Add a Medfriend to receive discreet, free notifications if you miss a dose, keeping you and your loved ones connected.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="container px-4">
+			<div class="row gx-5">
+			  <div class="col">
+			   <div class="p-3 border bg-light">Custom column padding</div>
+			  </div>
+			  <div class="col">
+				<div class="p-3 border bg-light">Custom column padding</div>
+			  </div>
+			</div>
+		  </div>
+		<Footer />
+	</body>
+</html>

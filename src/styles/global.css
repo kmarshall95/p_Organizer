@@ -1,0 +1,161 @@
+/*
+  The CSS in this style tag is based off of Bear Blog's default CSS.
+  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
+  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
+ */
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Verdana, sans-serif;
+	margin: 0;
+	text-align: left;
+	background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	line-height: 1.5;
+	color: #444;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+	color: #222;
+}
+a {
+	color: #3273dc;
+}
+
+p{
+	font-size: 1.6rem;
+	line-height: 1.8rem;
+}
+nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: end;
+	align-items: center;
+	padding: 1rem .5rem;
+}
+
+nav a {
+	margin-right: 10px;
+}
+textarea {
+	width: 100%;
+	font-size: 16px;
+}
+input {
+	font-size: 16px;
+}
+content {
+	line-height: 1.6;
+}
+table {
+	width: 100%;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+code {
+	padding: 2px 5px;
+	background-color: #f2f2f2;
+}
+pre {
+	padding: 1rem;
+}
+pre > code {
+	all: unset;
+}
+blockquote {
+	border: 1px solid #999;
+	color: #222;
+	padding: 2px 0px 2px 20px;
+	margin: 0px;
+	font-style: italic;
+}
+
+
+/* custom styles */
+.col, .col-lg-5, .col-lg-7 {
+	background: rgba(240, 255, 255, 0.5);
+	border: 1px solid #ccc;
+	border-radius: 25px;
+	padding: 20px;
+}
+
+
+/* Carousel Style */
+.carousel {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+
+.carousel > ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.slide > img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.slide {
+	position: absolute;
+	inset: 0;
+	opacity: 0;
+	transition: 200ms opacity ease-in-out;
+	transition-delay: 200ms;
+}
+
+.slide[data-active]{
+	opacity: 1;
+	transition-delay: 0ms;
+	z-index: 1;
+}
+
+.carousel-button {
+	position: absolute;
+	background: none;
+	color: rgba(255, 255, 255, .5);
+	border: none;
+	font-size: 9rem;
+	z-index: 4;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	padding: 0 .5rem;
+	background-color: rgba(0, 0, 0, .1);
+	border-radius: .25rem;
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+	color: rgba(255, 255, 255, 1);
+	background-color: rgba(0, 0, 0, .2);
+}
+
+.carousel-button:focus {
+	outline: 2px solid black;
+}
+
+.carousel-button.prev {
+	left: 1rem;
+}
+
+.carousel-button.next {
+	right: 1rem;
+}
